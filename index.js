@@ -1,9 +1,4 @@
 const inquirer = require('inquirer');
-const fs = require('fs');
-const generateMarkdown = require('./utils/generateMarkdown');
- 
-
-
 
 const promptUser = () => {
   return inquirer.prompt([
@@ -128,27 +123,10 @@ const promptUser = () => {
   ]);
 };
 
-
-//promptUser().then(answers => console.log(answers));
-promptUser()
-.then(answers => {
-  const readMe = generateMarkdown(answers);
-  fs.writeFile('./readme.md', readMe, err => {
-    if (err) throw new Error(err);
-    console.log('worked!');
-  })
-
-});
-
-
-
-
-
-
- 
+promptUser().then(answers => console.log(answers));
 
 //const fs = require('fs');
-//const generatePage = require('.l/src/page-template');
+//const generatePage = require('./src/page-template');
 
 //const pageHTML = generatePage(name, github);
 
