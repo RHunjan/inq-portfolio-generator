@@ -7,15 +7,16 @@ var badgeMessage = '';
 function renderLicenseBadge(license) {
   if (license == 'Apache 2.0'){
     badge = '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)';
+    badgeMessage = 'This application is covered under Apache 2.0 license terms. Click badge for more info: ';
   } else if (license == 'BSD 3-Clause'){
     badge = '[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)';
-    console.log(license);
+    badgeMessage = 'This application is covered under BSD 3-Clause license terms. Click badge for more info: ';
 } else if (license == 'GNU') {
     badge = '[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)';
-    console.log(license);
+    badgeMessage = 'This application is covered under GNU license terms. Click badge for more info: ';
 } else if (license == 'MIT') {
     badge = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
-    console.log(license);
+    badgeMessage = 'This application is covered under MIT license terms. Click badge for more info: ';
 } else {
   badge = '';
 }
@@ -60,6 +61,9 @@ function generateMarkdown(data) {
   ${data.usage}
 
   ## License
+  ${badgeMessage}
+
+  ${badge}
 
   ## Contributing
   ${data.contribution}
