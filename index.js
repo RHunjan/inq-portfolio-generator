@@ -1,9 +1,9 @@
+// TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
  
-
-
+// TODO: Create an array of questions for user input
 
 const promptUser = () => {
   return inquirer.prompt([
@@ -129,10 +129,13 @@ const promptUser = () => {
 };
 
 
-//promptUser().then(answers => console.log(answers));
+
+ // TODO: Create a function to initialize app
+ // Function call to initialize app
 promptUser()
 .then(answers => {
   const readMe = generateMarkdown(answers);
+  // TODO: Create a function to write README file
   fs.writeFile('./readme.md', readMe, err => {
     if (err) throw new Error(err);
     console.log('worked!');
@@ -143,17 +146,3 @@ promptUser()
 
 
 
-
-
- 
-
-//const fs = require('fs');
-//const generatePage = require('.l/src/page-template');
-
-//const pageHTML = generatePage(name, github);
-
-//fs.writeFile('./index.html', pageHTML, err => {
- // if (err) throw err;
-
- // console.log('Portfolio complete! Check out index.html to see the output!');
-//});
