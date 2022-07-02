@@ -2,6 +2,8 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
+const renderLicenseBadge = require('./utils/generateMarkdown');
+ 
  
 // TODO: Create an array of questions for user input
 
@@ -80,7 +82,6 @@ const promptUser = () => {
         if (projectTest){
           return true;
         } else {
-          console.log('Please enter project testing instructions');
           return false;
         }
       }
@@ -89,16 +90,8 @@ const promptUser = () => {
       type: 'checkbox',
       name: 'license',
       message: 'What is the license for project?',
-      choices: ['A', 'B', 'C', 'D'],
-      validate: projectLicense => {
-        if (projectLicense){
-          return true;
-        } else {
-          console.log('Please enter the project license');
-          return false;
-        }
-      }
-    },
+      choices: ['Apache 2.0', 'BSD 3-Clause', 'GNU', 'MIT'],
+         },
     {
       type: 'input',
       name: 'github',
@@ -134,7 +127,10 @@ const promptUser = () => {
  // Function call to initialize app
 promptUser()
 .then(answers => {
+
+  
   const readMe = generateMarkdown(answers);
+ 
   // TODO: Create a function to write README file
   fs.writeFile('./readme.md', readMe, err => {
     if (err) throw new Error(err);
