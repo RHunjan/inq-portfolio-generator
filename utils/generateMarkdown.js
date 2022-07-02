@@ -20,8 +20,13 @@ function generateMarkdown(data) {
    ${data.description}
 
   ## Table of Contents
-  [Installation](#Installation)
-  [Usage](#Usage)
+  [Installation](#Installation)<br>
+  [Usage](#Usage)<br>
+  [License](#License)<br>
+  [Contributing](#Contributing)<br>
+  [Tests](#Tests)<br>
+  [Questions](#Questions)
+
 
 
   ## Installation
