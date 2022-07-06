@@ -1,9 +1,9 @@
 
-  # A virtual readme generator    
+  # A Professional Readme file    
   [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
   
   ## Description
-   Builds a readme based on user input
+   A readme file is created based on user input
 
   ## Table of Contents
   [Installation](#Installation)<br>
@@ -16,10 +16,10 @@
 
 
   ## Installation
-  No special instructions
+  There are no instructions
 
   ## Usage
-  Use the project to build a readme
+  Use the terminal to enter information
 
   ## License
   This application is covered under BSD 3-Clause license terms. Click badge for more info: 
@@ -27,14 +27,14 @@
   [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
   ## Contributing
-  There are no guidelines
+  No contribution guidelines
 
   ## Tests
   No testing instructions
 
   ## Questions
-  Rhunjan
-  reena_hunjan@yahoo.com
+  #### Github username: Rhunjan
+  #### For additional questions contact me at: reena_hunjan@yahoo.com
 
 
 
