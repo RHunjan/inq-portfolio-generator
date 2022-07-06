@@ -2,7 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
-const renderLicenseBadge = require('./utils/generateMarkdown');
+ 
  
  
 // TODO: Create an array of questions for user input
@@ -134,7 +134,7 @@ promptUser()
   // TODO: Create a function to write README file
   fs.writeFile('./readme.md', readMe, err => {
     if (err) throw new Error(err);
-    console.log('worked!');
+ 
   })
 
 });
